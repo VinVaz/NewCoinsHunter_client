@@ -1,10 +1,10 @@
 module.exports = {
-  title: 'MakeupLinks',
-  description: 'Share beauty with the world',
-  siteUrl: 'https://makeuplinks.com',
+  title: 'NewCoinsHunter',
+  description: 'Find crypto projects before they become popular',
+  siteUrl: 'https://newcoinshunter.com',
   googleAnalytic: '',
   author: {
-    name: 'Vinicius Vaz'
+    name: 'VSV'
   },
   lang: 'en'
 }

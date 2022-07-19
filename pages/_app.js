@@ -1,11 +1,12 @@
 import React from 'react'
 import Head from 'next/head'
+import store from '../store/store'
+import { Provider as StoreProvider } from 'react-redux'
 import { SnackbarProvider } from 'notistack'
 import { ThemeProvider } from '@mui/material/styles'
-import { StoreProvider } from '../utils/Store'
 import { CacheProvider } from '@emotion/react'
 import createEmotionCache from '/createEmotionCache'
-import themes from '/themes/index'
+import themes from '../themes/index'
 
 const clientSideEmotionCache = createEmotionCache()
 
@@ -21,8 +22,8 @@ export default function MyApp(props) {
         <SnackbarProvider
           anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
         >
-          <StoreProvider>
-            <ThemeProvider theme={themes}>
+          <StoreProvider store={store}>
+            <ThemeProvider theme={{ ...themes }}>
               <Component {...pageProps} />
             </ThemeProvider>
           </StoreProvider>
